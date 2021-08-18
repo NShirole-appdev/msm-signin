@@ -29,6 +29,14 @@
       </div>
     </div>
 
+<% if Bookmark.exists?(:movie_id => @the_movie.id) %>
+      <a href="/delete_bookmark/<%= Bookmark.where(:movie_id => @the_movie.id).at(0).id %>">
+          Un-bookmark
+        </a>
+     <% else end %>
+    
+    
+    
     <dl>
       <dt>
         Title

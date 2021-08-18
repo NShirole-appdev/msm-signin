@@ -33,20 +33,6 @@ class BookmarksController < ApplicationController
     end
   end
 
-  def create_moviepage
-  the_bookmark = Bookmark.new
-  the_bookmark.user_id = session.fetch(:user_id)
-  the_id = params.fetch("path_id")
-  the_movie = Movie.where({ :id => the_id }).at(0)
-
-  if the_bookmark.valid?
-    the_bookmark.save
-    redirect_to("/bookmarks", { :notice => "Bookmark created successfully." })
-  else
-    redirect_to("/bookmarks", { :notice => "Bookmark failed to create successfully." })
-  end
-  end
-
   def update
     the_id = params.fetch("path_id")
     the_bookmark = Bookmark.where({ :id => the_id }).at(0)
