@@ -18,11 +18,13 @@
 
     <nav>
       <ul>
+      <% if @current_user != nil %>
           <li>
             <a href="/user_sign_out">
               Sign out
             </a>
           </li>
+          <% else end %>
           <li>
             <a href="/user_sign_in">
               Sign in

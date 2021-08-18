@@ -11,6 +11,17 @@
         </a>
       </div>
 
+<div>
+<% if @current_user != nil %>
+<form action="/insert_bookmark" method="post" query_movie_id = <%= @the_movie.id %> >
+ <input type="text" id="movie_id_box" name="query_movie_id" value="<%= @the_movie.id %>">
+
+      <button>
+        Bookmark this movie!
+      </button>
+      </div>
+    </form>
+     <% else end %>
       <div>
         <a href="/delete_movie/<%= @the_movie.id %>">
           Delete movie
