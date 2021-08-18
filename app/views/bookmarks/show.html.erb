@@ -83,4 +83,35 @@
   </div>
 </div>
 
+
+<div>
+  <div>
+    <h2>
+      Delete bookmark
+    </h2>
+
+    <form action="/modify_bookmark/<%= @the_bookmark.id %>"  method="post" >
+      <div>
+        <label for="user_id_box">
+          User
+        </label>
+
+        <input type="text" id="user_id_box" name="query_user_id" value="<%= @the_bookmark.user_id %>">
+      </div>
+
+      <div>
+        <label for="movie_id_box">
+          Movie
+        </label>
+
+        <input type="text" id="movie_id_box" name="query_movie_id" value="<%= @the_bookmark.movie_id %>">
+      </div>
+
+      <button>
+        Un-bookmark
+      </button>
+    </form>
+  </div>
+</div>
+
 <hr>

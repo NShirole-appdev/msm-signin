@@ -35,11 +35,13 @@
               Sign up
             </a>
           </li>
+          <% if @current_user != nil %>
           <li>
             <a href="/bookmarks">
               My bookmarks
             </a>
           </li>
+          <% else end %>
         <li>
           <a href="/">
             Home
